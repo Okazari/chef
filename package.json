@@ -1,0 +1,17 @@
+{
+  "name": "chef",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nx run-many -t dev"
+  },
+  "private": true,
+  "dependencies": {},
+  "devDependencies": {
+    "nx": "16.3.2",
+    "nx-cloud": "latest"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
+}
