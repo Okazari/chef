@@ -1,22 +1,12 @@
-import { gql, useQuery } from "@apollo/client";
+import Recipes from "./Recipes/Recipes";
+import RecipeForm from "./RecipeForm/RecipeForm";
+import "./App.scss";
 
-const App = () => {
-  const { data } = useQuery(gql`
-    query getRecipes {
-      recipes {
-        id
-        name
-      }
-    }
-  `);
-
-  return (
-    <div>
-      {data?.recipes?.map((recipe) => (
-        <div>{recipe.name}</div>
-      ))}
-    </div>
-  );
-};
+const App = () => (
+  <>
+    <RecipeForm />
+    <Recipes />
+  </>
+);
 
 export default App;
