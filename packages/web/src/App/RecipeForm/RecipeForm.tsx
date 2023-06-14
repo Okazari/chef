@@ -1,7 +1,7 @@
 import { gql, useMutation } from "@apollo/client";
 import styles from "./RecipeForm.module.scss";
 import classnames from "classnames/bind";
-import { useState } from "react";
+import { FormEvent, useState } from "react";
 
 const cx = classnames.bind(styles);
 
@@ -19,9 +19,8 @@ const RecipeForm = () => {
   });
   const [recipeName, setRecipeName] = useState("");
 
-  const onSubmit = (event) => {
+  const onSubmit = (event: FormEvent) => {
     event.preventDefault();
-    console.log(recipeName);
     createRecipe({
       variables: {
         name: recipeName,
