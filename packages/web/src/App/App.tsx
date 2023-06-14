@@ -14,7 +14,7 @@ const router = createBrowserRouter([
     ),
     children: [
       {
-        path: "",
+        index: true,
         Component: Recipes,
       },
       {
