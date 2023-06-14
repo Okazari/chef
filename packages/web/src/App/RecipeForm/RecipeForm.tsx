@@ -6,7 +6,7 @@ import { FormEvent, useState } from "react";
 const cx = classnames.bind(styles);
 
 const mutation = gql`
-  mutation createRecipe($name: String) {
+  mutation createRecipe($name: String!) {
     createRecipe(name: $name) {
       id
     }
